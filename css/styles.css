@@ -175,12 +175,15 @@ button {
 .hero {
     background-color: #2F303A;
     text-align: center;
+    padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.4)), url(../images/img.hero.jpg);
     background-position: center;
     background-size: cover;
     max-width: 1600px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
+    background-repeat: no-repeat;
 }
 
 
@@ -192,7 +195,6 @@ button {
     text-transform: uppercase;
     color: var(--border-top-color);
     text-align: center;
-    padding-top: 200px;
     margin-bottom: 30px;
     width: 696px;
     margin: 0 auto;
@@ -212,7 +214,6 @@ button {
     padding-right: 32px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 200px;
     border: none;
 }
 
@@ -233,13 +234,6 @@ button {
     padding-top: 94px;
 }
 
-.menu-icon {
-    display: flex;
-    background-color: var(--section-main-color);
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 
 .list-icon {
     display: flex;
@@ -248,9 +242,12 @@ button {
 }
 
 .item-icon {
+    display: flex;
     background-color: var(--section-main-color);
     width: 270px;
     height: 120px;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-subtitle {
@@ -304,16 +301,15 @@ button {
 
 .list-avatar {
     background-color: var(--section-picture-color);
+
 }
 
 .subject {
-    display: inline-block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
     color: var(--primary-color);
     margin-bottom: 10px;
-    margin-top: 30px;
 }
 
 .subject-direction {
@@ -332,10 +328,14 @@ button {
 .text-avatar {
     display: block;
     text-align: center;
+    padding: 30px 0;
+
+}
+
+.social-list-item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background: #FFFFFF;
-
 }
 
 .social-list {
@@ -343,13 +343,12 @@ button {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding-bottom: 30px;
 }
 
 .social-list-icon {
     width: 20px;
     height: 20px;
-    fill: #AFB1B8;
+    fill: currentColor;
 }
 
 
@@ -360,12 +359,11 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #FFFFFF;
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
-    fill: #FFFFFF;
+    color: #FFFFFF;
     background-color: #2196F3;
 }
 
@@ -381,7 +379,6 @@ button {
 .list-client {
     display: flex;
     gap: 30px;
-    justify-content: center;
 }
 
 .link-client {
@@ -394,30 +391,30 @@ button {
     border-radius: 4px;
 }
 
-
-.client-item {
-    fill: #AFB1B8;
-}
-
 .link-client:hover,
 .link-client:focus {
-    fill: #2196F3;
     color: #2196F3;
+    fill: #2196F3;
+    border-color: #2196F3;
 }
 
-.container-client {
+.client-item {
+    fill: currentColor;
+}
+
+
+.section-client {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.list-portfolio:hover {
-    box-shadow: 0 15px 10px #777;
-    transform: rotate(-3deg);
-}
+
 
 /* ====================================footer =================================*/
 .footer {
     background-color: #2F303A;
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 .link-address {
@@ -426,7 +423,8 @@ button {
     color: var(--border-top-color);
 }
 
-.link-address:hover {
+.link-address:hover,
+.link-address:focus {
     color: var(--accent-color);
 }
 
@@ -462,8 +460,7 @@ button {
 
 .footer-box {
     display: flex;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    align-items: baseline;
 }
 
 .box-address {
@@ -477,7 +474,7 @@ button {
     letter-spacing: 0.03em;
     color: #FFFFFF;
     margin-bottom: 20px;
-    padding-top: 12px;
+    text-transform: uppercase;
 }
 
 .list-icon-footer {
@@ -527,7 +524,6 @@ button {
     color: var(--primary-color);
     cursor: pointer;
     background-color: var(--section-picture-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     padding-left: 22px;
     padding-right: 22px;
@@ -541,6 +537,17 @@ button {
     color: var(--border-top-color);
     background-color: var(--accent-color);
     box-shadow: 0 10px 10px #777;
+}
+
+.link-img {
+    display: block;
+
+}
+
+.link-img:hover,
+.link-img:focus {
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-2deg);
 }
 
 .list-img {
